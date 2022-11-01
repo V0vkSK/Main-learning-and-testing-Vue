@@ -15,12 +15,8 @@
 </div>
 </div>
 </template>
- <!-- :title="book.title"
-      :descr="book.descr"
-      
-      :imgUrl="book.imgUrl"
-      :genre="book.genre" -->
-<script>
+ 
+ <script>
 import BookItem from './BookItem.vue'
 import {mapGetters, mapState} from 'vuex'
   
@@ -67,14 +63,6 @@ flex-wrap: wrap;
 margin-right: auto;
 margin-left: auto;
 }
-
-// margin-bottom: 30px;
-// .book-container-list:not(:nth-child(3n)) {
-//   // margin-right: 30px;
-// }
-// .book-container-list:not(:nth-last-child(-n + 3)) {
-//   margin-bottom: 30px;
-// }
 .btn-link{
   position: fixed;
   bottom: 30px;

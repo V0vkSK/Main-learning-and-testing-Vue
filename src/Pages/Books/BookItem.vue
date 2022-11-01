@@ -22,7 +22,7 @@ export default {
   props: {
     id: {
       type: Number,
-      // required: true,
+      
     },
     authorName: {
       type: String,
@@ -52,8 +52,6 @@ export default {
   background-color: white;
   margin-top: 20px;
   margin-right: 20px;
-  // margin-left: auto;
-  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 10px;
   }
@@ -81,7 +79,6 @@ export default {
   display: flex;
   width: 100%;
   height: 100%;
-// max-height: calc(1em * 1.4 *22); //количество строк в блоке
   overflow: hidden;
   margin: 0;
   padding: 20px;

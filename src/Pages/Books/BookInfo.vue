@@ -9,22 +9,11 @@
 </template>
 
 <script>
-// import {getBooksById, getAuthors} from '../../services/books.services'
-// import {mapState, mapGetters} from 'vuex'
 
 export default {
   name: 'BookInfo',
-//   data() {
-//     return {
-//       IdAuthor: { type: Number },
-//     nameOfAuthor:{type:String}
-//   }
-// },
-  
   computed: {
-    // nameAuthor() {
-      
-    // },
+ 
     booksList() {
       let IdAuthors = this.$store.getters.BOOKS[this.$route.params.id - 1].authorId
       localStorage.IdAuthor = Number(IdAuthors)
@@ -38,15 +27,6 @@ export default {
     }
   },
 
-//  mounted() {
-//      this.$store.dispatch('GET_BOOKS'),
-//      this.$store.dispatch('GET_AUTHORS')
-//   },
-     
-  //   getBook() {    
-  //     return this.$store.state.books[this.$route.params.id-1].title
-  // }
-    
   }
  
 </script>

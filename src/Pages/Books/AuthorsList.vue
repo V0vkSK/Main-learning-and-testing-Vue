@@ -17,18 +17,7 @@ import {mapState} from 'vuex'
   export default {
   name: 'AuthorsList',
   
-  // data() {
-  //   return{
-  //     authors: [],
-  //     names: '',
-  //     books: []
-  //   }
-  // },
   computed: {
-    // ...mapGetters([
-    //   'AUTHORS',
-    //   // 'BOOKS'
-    // ]),
     ...mapState([
       'books',
       'authors'
@@ -45,8 +34,6 @@ import {mapState} from 'vuex'
 
 <style lang="scss" scoped>
 .head{
-  // margin-left: auto;
-  // margin-right: auto;
   margin-top: 15px;
 }
 .container{
@@ -61,7 +48,6 @@ import {mapState} from 'vuex'
   margin-top: 50px;
   margin-right: auto;
   margin-left: -50px;
-  //  box-shadow: 0 20px 30px -10px rgb(0 0 0 / 35%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 padding-top: 5px;
 padding-bottom: 10px;

@@ -43,17 +43,9 @@ export default {
 }
 .container-head{
   display: flex;
-  // margin-left: 500px;
-  // padding: 30px;
-  // display: block;
-  // align-items: center;
-  // justify-content: center;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 .author-container-list {
 display: flex;
-// flex-direction: calc(100% / 4);
 justify-content: space-between;
 flex-wrap: wrap;
 margin-right: auto;
