@@ -3,14 +3,14 @@
   <div class="test-container">
     <h1>Tests Page</h1>
     <hr>
-    <button type="submit" @click="sending">add</button>
-    <button type="submit" @click="gett">get</button>
-    <!-- <div class="item">
+    <!-- <button type="submit" @click="sending">add</button>
+    <button type="submit" @click="gett">get</button> -->
+    <div class="item">
     <li v-for="item in items" :key="item.id">
       <h3>{{item.title}}</h3>
-      <img :src="item.multimedia[0].url" :alt="item.title">
-    </li> -->
-    <!-- </div> -->
+      <img :src="item.multimedia.scr" :alt="item.display_title">
+    </li>
+    </div>
   </div>
 </template>
 
@@ -25,38 +25,39 @@ export default {
   }
   },
   methods: {
-    sending() {
-      fetch("https://fakestoreapi.com/products", {
-    method: "POST",
-    body: JSON.stringify({
-    title: "test product",
-    price: 13.5,
-    description: "lorem ipsum set",
-    image: "https://i.pravatar.cc",
-    category: "electronic",
-  }),
-})
-  .then((res) => res.json())
-  .then((json) => console.log(json));
+//     sending() {
+//       fetch("https://fakestoreapi.com/products", {
+//     method: "POST",
+//     body: JSON.stringify({
+//     title: "test product",
+//     price: 13.5,
+//     description: "lorem ipsum set",
+//     image: "https://i.pravatar.cc",
+//     category: "electronic",
+//   }),
+// })
+//   .then((res) => res.json())
+//   .then((json) => console.log(json));
     },
-    async gett() {
-      await axios.get("https://fakestoreapi.com/products")
-      .then((res) => console.log(res.data))
-    }
-  },
+    // async gett() {
+    //   await axios.get("https://fakestoreapi.com/products")
+    //   .then((res) => console.log(res.data))
+    // }
+  // },
   async mounted() {
-    // await axios.get('https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Qv3Uw8MK4moKsVcaupYp3sRHa7QuXmtl')
-    //   .then(response => this.items = response.data.results)
-    //   stop        
-    //   .then(console.log(this.items))
+    await axios.get('https://api.nytimes.com/svc/movies/v2/reviews/picks.json?api-key=Qv3Uw8MK4moKsVcaupYp3sRHa7QuXmtl')
+      .then(response => this.items = response.data.results)
+      stop
+      .then(console.log(this.items))
 
-      await axios.get("https://fakestoreapi.com/products")
-      .then((res) => console.log(res.data))
+      // await axios.get("https://fakestoreapi.com/products")
+      // .then((res) => console.log(res.data))
       // .then((json) => console.log(json));
+      
   }
   
   }
-
+// https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Qv3Uw8MK4moKsVcaupYp3sRHa7QuXmtl
 
 </script>
 
